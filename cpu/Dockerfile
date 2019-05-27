@@ -7,4 +7,5 @@ WORKDIR /code
 COPY ./conda_environment.yml /code/conda_environment.yml
 
 RUN conda env create -f /code/conda_environment.yml && \
-    conda clean --all --yes
+    conda clean --all --yes && \
+    conda activate fastai
